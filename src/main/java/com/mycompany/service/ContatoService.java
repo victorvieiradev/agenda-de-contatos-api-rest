@@ -12,6 +12,8 @@ import java.util.Optional;
 public class ContatoService {
     @Autowired
     private ContatoRepository contatoRepository;
+    private ContatoRepository contatoRepository1;
+
     public ContatoModel cadastrarNovoContato(ContatoModel contatoModel){
         contatoModel.getId();
         contatoModel.getNome();
@@ -33,4 +35,7 @@ public class ContatoService {
     public Optional<ContatoModel>exibirContatoPorId(Long id){
         return contatoRepository.findById(id);
     }
+public ContatoModel buscarPorNome(String nome){
+        return contatoRepository.findByNome(nome);
+}
 }
