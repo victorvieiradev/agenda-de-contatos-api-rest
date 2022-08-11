@@ -34,8 +34,8 @@ public class ContatoController {
     public void excluirContato(@PathVariable Long id){
         contatoService.excluirContato(id);
     }
-    @GetMapping(path = "/contato/nome")
-    public ContatoModel buscarPorNome(@RequestParam(value = "nome", defaultValue = "") String nome ){
+    @GetMapping(path = "/contato/search")
+    public List<ContatoModel> buscarPorNome(@RequestParam(value = "nome", defaultValue = "", required = true) String nome ){
         return contatoService.buscarPorNome(nome);
     }
 

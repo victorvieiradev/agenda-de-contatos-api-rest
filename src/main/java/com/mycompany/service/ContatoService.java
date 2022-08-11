@@ -35,7 +35,7 @@ public class ContatoService {
     public Optional<ContatoModel>exibirContatoPorId(Long id){
         return contatoRepository.findById(id);
     }
-public ContatoModel buscarPorNome(String nome){
-        return contatoRepository.findByNome(nome);
+public List<ContatoModel> buscarPorNome(String nome){
+        return contatoRepository.findByNomeStartsWith(nome);
 }
 }
