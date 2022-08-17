@@ -12,8 +12,6 @@ import java.util.Optional;
 public class ContatoService {
     @Autowired
     private ContatoRepository contatoRepository;
-    private ContatoRepository contatoRepository1;
-
     public ContatoModel cadastrarNovoContato(ContatoModel contatoModel){
         contatoModel.getId();
         contatoModel.getNome();
